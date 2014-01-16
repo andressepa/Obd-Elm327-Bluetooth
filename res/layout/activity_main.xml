@@ -1,0 +1,149 @@
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainscreen"      
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background"
+    tools:context=".OBDActivity" >
+
+   <com.obdelm327.GaugeSpeed       
+        android:id="@+id/GaugeSpeed"       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+   <com.obdelm327.GaugeRpm    
+        android:id="@+id/GaugeRpm"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>  
+         <TextView
+          android:id="@+id/Status"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"         
+          android:layout_alignParentTop="true"              
+          android:text="not connected"
+          android:textColor="#EBDDE2"         
+          android:textSize="14sp"
+          android:paddingTop="6dp"
+          android:textStyle="bold" />
+      <TextView
+         android:id="@+id/Load_text"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/Status"
+         android:layout_toLeftOf="@+id/Load"
+         android:gravity="left"
+         android:text="Ld: "
+         android:textColor="#616D7E"
+         android:textSize="14sp"
+         android:textStyle="bold" />
+     <TextView
+         android:id="@+id/Load"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/Status"
+         android:layout_toLeftOf="@+id/Temp_text"
+         android:gravity="center"
+         android:text="0 %"
+         android:textColor="#99FFFF"
+         android:textSize="14sp"
+         android:textStyle="bold" />
+     <TextView
+         android:id="@+id/Temp_text"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignRight="@+id/Center_text"
+         android:layout_below="@+id/Status"
+         android:gravity="left"
+         android:text="  Tmp: "
+         android:textColor="#616D7E"
+         android:textSize="14sp"
+         android:textStyle="bold" />
+     <TextView
+          android:id="@+id/Center_text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/Status"
+          android:layout_centerHorizontal="true"
+          android:gravity="left"
+          android:text=" "
+          android:textColor="#616D7E"
+          android:textSize="14sp"
+          android:textStyle="bold" />  
+     <TextView
+         android:id="@+id/Temp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/Center_text"
+         android:layout_below="@+id/Status"
+         android:gravity="center"
+         android:text="0 C°"
+         android:textColor="#99FFFF"
+         android:textSize="14sp"
+         android:textStyle="bold" />
+     <TextView
+         android:id="@+id/Volt_text"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/Status"
+         android:layout_toRightOf="@+id/Temp"
+         android:gravity="left"
+         android:text="  Vlt: "
+         android:textColor="#616D7E"
+         android:textSize="14sp"
+         android:textStyle="bold" />
+     <TextView
+         android:id="@+id/Volt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/Status"
+         android:layout_toRightOf="@+id/Volt_text"
+         android:gravity="center"
+         android:text="0 V"
+         android:textColor="#99FFFF"
+         android:textSize="14sp"
+         android:textStyle="bold" />    
+     <TextView
+         android:id="@+id/Fuel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"         
+         android:layout_centerHorizontal="true"
+         android:gravity="center"
+         android:layout_below="@+id/Temp_text"
+         android:text="0 / 0 L/h"
+         android:textColor="#FFFF00"
+         android:textSize="18sp"
+         android:layout_marginTop="5dp"		
+         android:textStyle="bold" />    
+   
+	 <ListView
+	     android:id="@+id/in"
+	     android:layout_width="match_parent"
+	     android:layout_height="match_parent"
+	     android:layout_above="@+id/button_send"    
+	     android:stackFromBottom="true"
+	     android:textSize="14sp"
+	     android:transcriptMode="alwaysScroll" />
+     <Button
+         android:id="@+id/button_send"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:text="@string/send" />
+     <EditText
+         android:id="@+id/edit_text_out"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/button_send"
+         android:layout_alignBottom="@+id/button_send"
+         android:layout_alignParentLeft="true"
+         android:layout_toLeftOf="@+id/button_send"        
+         android:ems="10" />
+
+</RelativeLayout>
