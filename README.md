@@ -1,7 +1,7 @@
 ObdElm327
 =========
 
-ECU OBD Bluetooth ELM 327
+ECU OBD Bluetooth ELM 327:
 This software will communicate with your ELM 327 OBD II Bluetooth adapter.
 The ELM 327 Bluetooth Adapter can connect directly to your Vehicles 16 Pin OBD II diagnostic connector.
 You can get real time data like rpm, speed, engine temp, fuel consumption,engine load, battery voltage..
