@@ -12,3 +12,5 @@ HARDWARE REQUIREMENT: ELM 327 Bluetooth Adapter.
 
 Google Store:
 https://play.google.com/store/apps/details?id=com.obdelm327
+
+GNU GENERAL PUBLIC LICENSE Version 3
